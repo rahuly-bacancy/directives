@@ -1,0 +1,18 @@
+<main class="page">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Directives</p>
+    </div>
+  </header>
+
+  <section class="sections">
+    <p [appHighLight]="'red'">This is test</p>
+    <p [appHighLight]="'blue'">This is test</p>
+    <p *appIf="false">This is test</p>
+    <ng-template [appIf]="false">
+      <p>This is test 123</p>
+    </ng-template>
+    <p *appFor="let item of items; let i = index">{{ item }} - {{ i }}</p>
+    <app-directives-deep-dive></app-directives-deep-dive>
+  </section>
+</main>

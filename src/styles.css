@@ -1,0 +1,5 @@
+:root { color-scheme: light; background-color: #f4f6fb; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif; background: #f4f6fb; color: #0f172a; }
+a { color: inherit; }
+code { background: #f1f5f9; padding: 0.1rem 0.35rem; border-radius: 6px; }

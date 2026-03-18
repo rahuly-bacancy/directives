@@ -1,0 +1,55 @@
+<section class="card" id="deep-dive">
+  <header class="header">
+    <div>
+      <h2>Directives Deep Dive</h2>
+      <p class="lead">
+        This page is designed for teaching: each topic includes a definition, what it is, how it works, and a small code example.
+      </p>
+    </div>
+    <div class="tip">
+      <p><strong>Tip:</strong> Expand one topic at a time and discuss the “How it works” bullets with learners.</p>
+    </div>
+  </header>
+
+  <div class="topics">
+    <details class="topic" *ngFor="let topic of topics; trackBy: trackByTopicId">
+      <summary>
+        <span class="topic-title">{{ topic.title }}</span>
+        <span class="badge">Explain</span>
+      </summary>
+
+      <div class="topic-body">
+        <div class="grid">
+          <section class="panel">
+            <h3>Definition</h3>
+            <p>{{ topic.definition }}</p>
+          </section>
+
+          <section class="panel">
+            <h3>What is it?</h3>
+            <p>{{ topic.whatIsIt }}</p>
+          </section>
+        </div>
+
+        <section class="panel">
+          <h3>How it works</h3>
+          <ul>
+            <li *ngFor="let line of topic.howItWorks">{{ line }}</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h3>Key takeaways</h3>
+          <ul>
+            <li *ngFor="let takeaway of topic.keyTakeaways">{{ takeaway }}</li>
+          </ul>
+        </section>
+
+        <section class="panel" *ngIf="topic.codeExample">
+          <h3>Code example</h3>
+          <pre><code>{{ topic.codeExample }}</code></pre>
+        </section>
+      </div>
+    </details>
+  </div>
+</section>

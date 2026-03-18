@@ -1,0 +1,35 @@
+.card { padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 14px; background: #ffffff; box-shadow: 0 6px 24px rgba(0,0,0,0.04); }
+.header { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; align-items: start; margin-bottom: 1rem; }
+.lead { color: #4b5563; margin: 0.35rem 0 0; }
+.tip { background: #fff; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 0.9rem 1rem; color: #475569; }
+
+.topics { display: grid; gap: 0.75rem; }
+.topic { border: 1px solid #e5e7eb; border-radius: 12px; background: #f9fafb; overflow: hidden; }
+.topic[open] { background: #ffffff; }
+
+summary { list-style: none; cursor: pointer; padding: 0.85rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+summary::-webkit-details-marker { display: none; }
+.topic-title { font-weight: 800; color: #0f172a; }
+.badge { font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.55rem; border-radius: 999px; background: #eef2ff; border: 1px solid #c7d2fe; color: #3730a3; }
+
+.topic-body { padding: 0 1rem 1rem; display: grid; gap: 0.75rem; }
+.grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.panel { border: 1px solid #e5e7eb; border-radius: 12px; background: #ffffff; padding: 0.85rem 1rem; }
+.panel h3 { margin: 0 0 0.35rem; font-size: 1rem; }
+.panel p { margin: 0; color: #334155; }
+ul { margin: 0.35rem 0 0; padding-left: 1.1rem; color: #334155; }
+li { margin: 0.25rem 0; }
+
+pre { margin: 0.35rem 0 0; background: #111827; color: #e5e7eb; padding: 0.75rem; border-radius: 10px; overflow-x: auto; font-size: 0.9rem; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: transparent; /* ensure no white overlay on dark pre */
+  color: inherit;          /* inherit the pre's light text color */
+  display: block;          /* fill the pre area for consistent rendering */
+  white-space: inherit;    /* keep line breaks and spacing from pre */
+}
+
+@media (max-width: 840px) {
+  .header { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
+}
