@@ -1,0 +1,116 @@
+# Angular Directive Practice Tasks
+
+---
+
+## 🧩 Task 1: Attribute Directive — Button Loading
+
+### 🎯 Goal
+
+Create a directive that shows loading state on a button when it is clicked.
+
+---
+
+## 🧠 Problem
+
+When a user clicks a button (like Submit), we want:
+
+* Button should be disabled
+* Button text should change to "Loading..."
+* After some time, button should come back to normal
+
+---
+
+## 📋 What you need to build
+
+Create a directive:
+
+```
+[appLoading]
+```
+
+---
+
+## 🧪 Example Usage
+
+```
+<button appLoading>Submit</button>
+```
+
+---
+
+## ⚙️ Expected Behavior
+
+1. When user clicks button:
+
+   * Button becomes disabled
+   * Text changes to **"Loading..."**
+
+---
+
+---
+
+# 🧩 Task 2: Structural Directive — Repeat Content
+
+### 🎯 Goal
+
+Create a directive that repeats content multiple times.
+
+---
+
+## 🧠 Problem
+
+We want to show same UI multiple times without writing it again and again.
+
+---
+
+## 📋 What you need to build
+
+Create a directive:
+
+```
+*appRepeat
+```
+
+---
+
+## 🧪 Example Usage
+
+```
+<div *appRepeat="3">
+  Hello
+</div>
+```
+
+---
+
+## ⚙️ Expected Output
+
+```
+Hello  
+Hello  
+Hello  
+```
+
+---
+
+## 📋 Additional Requirement
+
+Support index:
+
+```
+<div *appRepeat="3; let i = index">
+  Item {{ i }}
+</div>
+```
+
+---
+
+## ⚙️ Expected Output
+
+```
+Item 0  
+Item 1  
+Item 2  
+```
+
+
