@@ -1,16 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { DirectivesDeepDiveComponent } from './components/directives-deep-dive/directives-deep-dive.component';
-import { HighLight } from './directive/high-light';
-import { If } from "./directive/if";
-import { For } from './directive/for';
+import { Higjlight } from './directives/higjlight';
+import { If } from './directives/if';
+import { For } from "./directives/for";
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
     DirectivesDeepDiveComponent,
-    HighLight,
+    Higjlight,
     If,
     For
 ],

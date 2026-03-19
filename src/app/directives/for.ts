@@ -1,8 +1,7 @@
 import { Directive, effect, input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appFor]',
-  standalone: true
+  selector: '[appFor]'
 })
 export class For {
 
@@ -10,8 +9,8 @@ export class For {
   constructor(private templateRef: TemplateRef<any>, private viewContainer: ViewContainerRef) { 
     effect(() => {
       this.viewContainer.clear();
-      this.appForOf().forEach((item: any) => {
-        this.viewContainer.createEmbeddedView(this.templateRef, { $implicit: item, index: this.appForOf().indexOf(item)});
+      this.appForOf().forEach((item,index) => {
+        this.viewContainer.createEmbeddedView(this.templateRef, { $implicit: item, $index: index });
       })
     })
   }
